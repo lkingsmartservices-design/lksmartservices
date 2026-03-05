@@ -1,40 +1,351 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<title>LK Smart Services</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{font-family:Arial;background:#f4f4f4;text-align:center;padding:40px}
-.container{background:white;padding:30px;border-radius:10px;max-width:600px;margin:auto}
-h1{color:green}
-button{background:green;color:white;padding:12px 20px;border:none;border-radius:5px}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LK Smart Services | Resumes • Job Applications • Flyers</title>
+  <meta name="description" content="LK Smart Services helps you stand out with professional resumes, cover letters, job application assistance, business documents, PDFs, and eye-catching flyers & social media content." />
+
+  <!-- Social preview (optional but nice) -->
+  <meta property="og:title" content="LK Smart Services" />
+  <meta property="og:description" content="Resumes • Cover Letters • Job Applications • Business Docs • Flyers & Social Media Content" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="flyer.png" />
+
+  <style>
+    :root{
+      --bg:#0b1220; --card:#111b2f; --card2:#0f182b;
+      --text:#f2f5ff; --muted:#b7c2db;
+      --brand:#22c55e; --brand2:#16a34a; --line:rgba(255,255,255,.12);
+      --shadow: 0 20px 50px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background: radial-gradient(1200px 800px at 20% 0%, rgba(34,197,94,.22), transparent 55%),
+                  radial-gradient(900px 700px at 90% 10%, rgba(59,130,246,.18), transparent 55%),
+                  linear-gradient(180deg,#070b14,#0b1220);
+      color:var(--text);
+    }
+    a{color:inherit}
+    .wrap{max-width:1050px;margin:0 auto;padding:22px}
+    .top{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      position:sticky;top:0;padding:12px 0;background:linear-gradient(180deg, rgba(11,18,32,.95), rgba(11,18,32,.65));
+      backdrop-filter: blur(8px);
+      z-index:5;
+    }
+    .brand{
+      display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.2px
+    }
+    .badge{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04)}
+    .nav{display:flex;gap:10px;flex-wrap:wrap}
+    .nav a{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);text-decoration:none}
+    .hero{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:stretch;
+      padding:18px 0 10px;
+    }
+    .card{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      box-shadow: var(--shadow);
+    }
+    h1{margin:0 0 10px;font-size:40px;line-height:1.08}
+    .sub{margin:0 0 16px;color:var(--muted);line-height:1.6}
+    .btns{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 16px;border-radius:14px;font-weight:800;text-decoration:none;
+      border:1px solid transparent;
+    }
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#06110a}
+    .btn.secondary{border-color:var(--line);background:rgba(255,255,255,.04)}
+    .mini{display:grid;gap:10px}
+    .mini p{margin:0;color:var(--muted)}
+    .pillrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .pill{padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03);color:var(--muted);font-size:13px}
+    .section{padding:16px 0}
+    h2{margin:0 0 10px;font-size:22px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .svc{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:16px;padding:14px;
+    }
+    .svc h3{margin:0 0 6px;font-size:16px}
+    .svc p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+    .pricing{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .price{padding:16px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04)}
+    .price strong{font-size:16px}
+    .money{font-size:26px;font-weight:900;margin:6px 0}
+    .small{color:var(--muted);font-size:13px;line-height:1.5}
+    .list{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    .list li{margin:6px 0}
+    .portfolio{
+      display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start
+    }
+    .imgbox{
+      border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.02)
+    }
+    .imgbox img{width:100%;display:block}
+    .formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    input, select, textarea{
+      width:100%;padding:12px 12px;border-radius:12px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.04);color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px;resize:vertical}
+    label{font-size:13px;color:var(--muted)}
+    .full{grid-column:1 / -1}
+    .footer{padding:18px 0;margin-top:14px;border-top:1px solid rgba(255,255,255,.12);color:var(--muted);font-size:13px}
+    .float{
+      position:fixed;right:16px;bottom:16px;z-index:10;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#06110a;border-radius:999px;padding:12px 14px;
+      font-weight:900;text-decoration:none;box-shadow:var(--shadow);
+    }
+    @media (max-width: 850px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:32px}
+      .grid,.pricing{grid-template-columns:1fr}
+      .portfolio{grid-template-columns:1fr}
+      .formgrid{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 
 <body>
+  <a class="float" href="https://wa.me/17844973821" target="_blank" rel="noopener">WhatsApp Us</a>
 
-<div class="container">
-<h1>LK Smart Services</h1>
-<img src="Flyer.jpg" style="width:100%;max-width:500px;border-radius:10px;margin:20px 0;">
-<p>Your Future. Your Business. Done Smart.</p>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <div class="badge">LK</div>
+        <div>LK Smart Services</div>
+      </div>
+      <div class="nav">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#portfolio">Work</a>
+        <a href="#request">Request</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
 
-<h3>Our Services</h3>
+    <div class="hero">
+      <div class="card">
+        <h1>Your Future. Your Business. Done Smart.</h1>
+        <p class="sub">
+          We help you look professional and stand out with resumes, cover letters, job application help,
+          business documents/PDFs, and eye-catching flyers & social media designs.
+        </p>
+        <div class="btns">
+          <a class="btn primary" href="https://wa.me/17844973821" target="_blank" rel="noopener">Message on WhatsApp</a>
+          <a class="btn secondary" href="mailto:LKSmartServices@gmail.com">Email Us</a>
+          <a class="btn secondary" href="#request">Request a Service</a>
+        </div>
+        <div class="pillrow">
+          <div class="pill">Fast turnaround</div>
+          <div class="pill">Clean & professional</div>
+          <div class="pill">Word • PDF • PNG</div>
+          <div class="pill">SVG + Online</div>
+        </div>
+      </div>
 
-<p>Professional Resumes & Cover Letters</p>
-<p>Job Application Assistance</p>
-<p>Business Documents & PDFs</p>
-<p>Social Media Content & Flyers</p>
+      <div class="card mini">
+        <h2 style="margin:0 0 6px;">Quick Contact</h2>
+        <p><strong>Phone/WhatsApp:</strong> +1 (784) 497-3821</p>
+        <p><strong>Email:</strong> LKSmartServices@gmail.com</p>
+        <p><strong>Location:</strong> Saint Vincent & the Grenadines (Online available)</p>
+        <p class="small">Tip: Send your job link or business details on WhatsApp and we’ll start.</p>
+      </div>
+    </div>
 
-<h3>Contact Us</h3>
+    <div id="services" class="section">
+      <h2>Services</h2>
+      <div class="grid">
+        <div class="svc"><h3>Resumes</h3><p>New resumes, upgrades, formatting, and clean professional layout.</p></div>
+        <div class="svc"><h3>Cover Letters</h3><p>Customized cover letters to match the job you’re applying for.</p></div>
+        <div class="svc"><h3>Job Application Help</h3><p>Assistance filling out forms and submitting documents correctly.</p></div>
+        <div class="svc"><h3>Business Documents & PDFs</h3><p>Letters, forms, PDFs, proposals, and document formatting.</p></div>
+        <div class="svc"><h3>Flyers & Posters</h3><p>Eye-catching promotional designs for events and businesses.</p></div>
+        <div class="svc"><h3>Social Media Content</h3><p>Professional posts and graphics for Facebook/Instagram/WhatsApp.</p></div>
+      </div>
+    </div>
 
-<p>📞 +1 (784) 497-3821</p>
-<p>📧 LKingsmartServices@gmail.com</p>
+    <div id="pricing" class="section">
+      <h2>Pricing (Edit these anytime)</h2>
+      <p class="small">You can change prices later. These are good starter prices in SVG—adjust as you want.</p>
 
-<a href="https://wa.me/17844973821">
-<button>Message on WhatsApp</button>
-</a>
+      <div class="pricing">
+        <div class="price">
+          <strong>Starter</strong>
+          <div class="money">$25</div>
+          <div class="small">Basic resume OR simple flyer (1 design)</div>
+          <ul class="list">
+            <li>Clean formatting</li>
+            <li>1 revision</li>
+            <li>Delivered as PDF/PNG</li>
+          </ul>
+        </div>
 
-</div>
+        <div class="price" style="border-color:rgba(34,197,94,.55)">
+          <strong>Standard (Most Popular)</strong>
+          <div class="money">$45</div>
+          <div class="small">Resume + cover letter OR full flyer package</div>
+          <ul class="list">
+            <li>Professional layout</li>
+            <li>2 revisions</li>
+            <li>PDF + Word/Editable file</li>
+          </ul>
+        </div>
 
+        <div class="price">
+          <strong>Business Boost</strong>
+          <div class="money">$75</div>
+          <div class="small">Flyer + 3 social media posts OR business document set</div>
+          <ul class="list">
+            <li>Brand style matching</li>
+            <li>3 revisions</li>
+            <li>Ready for posting/printing</li>
+          </ul>
+        </div>
+      </div>
+      <p class="small" style="margin-top:10px;">Need something custom? Message us on WhatsApp for a quick quote.</p>
+    </div>
+
+    <div id="portfolio" class="section">
+      <h2>Work / Portfolio</h2>
+      <div class="portfolio">
+        <div class="imgbox">
+          <!-- If your image is flyer.jpg, change flyer.png to flyer.jpg -->
+          <img src="flyer.png" alt="LK Smart Services flyer sample" />
+        </div>
+        <div class="card" style="box-shadow:none">
+          <h2 style="margin-top:0;">What you’ll get</h2>
+          <p class="small">
+            High-quality files ready for WhatsApp, Facebook, Instagram, email, and printing.
+            We can also match your colors and style so your business looks consistent.
+          </p>
+          <ul class="list">
+            <li>Clear, modern design</li>
+            <li>Correct sizing for social media</li>
+            <li>Fast delivery and revisions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="request" class="section">
+      <h2>Request a Service</h2>
+      <p class="small">
+        Fill this out, then press “Send Request.” It will open your email with the message ready to send.
+        (No extra setup needed.)
+      </p>
+
+      <!-- Simple request form that opens email (works without any service) -->
+      <form id="reqForm" class="card" style="box-shadow:none;border-color:rgba(255,255,255,.12)">
+        <div class="formgrid">
+          <div>
+            <label>Your Name</label>
+            <input id="name" placeholder="Enter your name" required />
+          </div>
+          <div>
+            <label>Phone/WhatsApp</label>
+            <input id="phone" placeholder="e.g. 784-xxx-xxxx" />
+          </div>
+
+          <div>
+            <label>Service Needed</label>
+            <select id="service" required>
+              <option value="">Select one</option>
+              <option>Resume</option>
+              <option>Cover Letter</option>
+              <option>Job Application Assistance</option>
+              <option>Business Document / PDF</option>
+              <option>Flyer</option>
+              <option>Social Media Content</option>
+            </select>
+          </div>
+          <div>
+            <label>Urgency</label>
+            <select id="urgency">
+              <option>Standard</option>
+              <option>Urgent (24–48 hrs)</option>
+            </select>
+          </div>
+
+          <div class="full">
+            <label>Details (job title, company, what you want, etc.)</label>
+            <textarea id="details" placeholder="Write the details here..." required></textarea>
+          </div>
+
+          <div class="full">
+            <a class="btn primary" href="#" onclick="sendRequest();return false;">Send Request</a>
+            <a class="btn secondary" href="https://wa.me/17844973821" target="_blank" rel="noopener">Or WhatsApp Us</a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="grid" style="grid-template-columns:1fr 1fr 1fr">
+        <div class="svc">
+          <h3>WhatsApp / Call</h3>
+          <p>+1 (784) 497-3821</p>
+          <p class="small"><a href="https://wa.me/17844973821" target="_blank" rel="noopener">Open WhatsApp chat</a></p>
+        </div>
+        <div class="svc">
+          <h3>Email</h3>
+          <p>LKSmartServices@gmail.com</p>
+          <p class="small"><a href="mailto:LKSmartServices@gmail.com">Send an email</a></p>
+        </div>
+        <div class="svc">
+          <h3>Hours</h3>
+          <p class="small">Mon–Sat (Flexible)</p>
+          <p class="small">Message anytime and we’ll respond ASAP.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      © <span id="y"></span> LK Smart Services. All rights reserved.
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    function sendRequest(){
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const service = document.getElementById("service").value.trim();
+      const urgency = document.getElementById("urgency").value.trim();
+      const details = document.getElementById("details").value.trim();
+
+      if(!name || !service || !details){
+        alert("Please fill out Name, Service Needed, and Details.");
+        return;
+      }
+
+      const subject = encodeURIComponent("Service Request: " + service);
+      const body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Phone/WhatsApp: " + (phone || "N/A") + "\n" +
+        "Service Needed: " + service + "\n" +
+        "Urgency: " + urgency + "\n\n" +
+        "Details:\n" + details + "\n\n" +
+        "Sent from LK Smart Services website."
+      );
+
+      window.location.href = "mailto:LKSmartServices@gmail.com?subject=" + subject + "&body=" + body;
+    }
+  </script>
 </body>
 </html>
