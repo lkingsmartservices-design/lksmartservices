@@ -83,6 +83,10 @@
       font-weight:bold;
     }
 
+    .btn-dark{
+      background:#0d5f25;
+    }
+
     .section{
       background:white;
       margin-top:20px;
@@ -98,7 +102,8 @@
     }
 
     .services,
-    .pricing{
+    .pricing,
+    .payments{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       gap:15px;
@@ -154,14 +159,6 @@
       cursor:pointer;
     }
 
-    footer{
-      background:#0d5f25;
-      color:white;
-      text-align:center;
-      padding:20px;
-      margin-top:25px;
-    }
-
     .contact-info{
       text-align:center;
       font-size:16px;
@@ -172,6 +169,25 @@
       text-align:center;
       font-size:15px;
       margin-top:10px;
+    }
+
+    footer{
+      background:#0d5f25;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:25px;
+    }
+
+    @media(max-width:600px){
+      header h1{
+        font-size:28px;
+      }
+
+      nav a{
+        display:inline-block;
+        margin:6px 8px;
+      }
     }
   </style>
 </head>
@@ -186,6 +202,7 @@
     <a href="#services">Services</a>
     <a href="#pricing">Pricing</a>
     <a href="#request">Request</a>
+    <a href="#payments">Payments</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -199,7 +216,8 @@
         business documents, flyers, and social media content.
       </p>
       <a class="btn" href="https://wa.me/17844973821" target="_blank">Message on WhatsApp</a>
-      <a class="btn" href="mailto:lkingsmartservice@gmail.com">Send Email</a>
+      <a class="btn" href="mailto:lkingsmartservices@gmail.com">Send Email</a>
+      <a class="btn btn-dark" href="#payments">Payment Options</a>
     </div>
 
     <div class="section" id="services">
@@ -272,12 +290,43 @@
       </form>
     </div>
 
+    <div class="section" id="payments">
+      <h2>Payment Options</h2>
+      <div class="payments">
+        <div class="card">
+          <h3>PayPal</h3>
+          <p>Send payment to:</p>
+          <p><strong>lkingsmartservices@gmail.com</strong></p>
+          <br>
+          <a class="btn" href="https://www.paypal.com/paypalme/" target="_blank">Pay with PayPal</a>
+        </div>
+
+        <div class="card">
+          <h3>Bank Transfer</h3>
+          <p><strong>Bank:</strong> BOSVG</p>
+          <p>Message us on WhatsApp or email us to receive bank transfer details.</p>
+          <br>
+          <a class="btn btn-dark" href="https://wa.me/17844973821" target="_blank">Request Bank Details</a>
+        </div>
+
+        <div class="card">
+          <h3>Need Help Paying?</h3>
+          <p>Contact us and we will guide you through payment.</p>
+          <br>
+          <a class="btn" href="mailto:lkingsmartservices@gmail.com">Email Us</a>
+          <a class="btn btn-dark" href="https://wa.me/17844973821" target="_blank">WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+
     <div class="section" id="contact">
       <h2>Contact Us</h2>
       <div class="contact-info">
         <p>📞 +1 (784) 497-3821</p>
-        <p>📧 lkingsmartservice@gmail.com</p>
+        <p>📧 lkingsmartservices@gmail.com</p>
         <p>Saint Vincent & the Grenadines</p>
+        <br>
+        <a class="btn" href="https://wa.me/17844973821" target="_blank">Chat on WhatsApp</a>
       </div>
     </div>
 
@@ -314,9 +363,9 @@
         "Details:\n" + details
       );
 
-      window.location.href = "mailto:lkingsmartservice@gmail.com?subject=" + subject + "&body=" + body;
+      window.location.href = "mailto:lkingsmartservices@gmail.com?subject=" + subject + "&body=" + body;
     }
   </script>
 
 </body>
-</html>
+  </html>
