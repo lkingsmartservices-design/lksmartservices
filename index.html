@@ -1,371 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LK Smart Services</title>
-  <meta name="description" content="LK Smart Services - Resumes, cover letters, job application help, business documents, flyers and social media content.">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+<title>LK Smart Services</title>
 
-    body{
-      background:#f4f8f4;
-      color:#222;
-      line-height:1.6;
-    }
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    header{
-      background:linear-gradient(135deg,#0f7a2f,#1fa84c);
-      color:white;
-      text-align:center;
-      padding:30px 20px;
-    }
+<style>
 
-    header h1{
-      font-size:32px;
-      margin-bottom:10px;
-    }
+body{
+font-family:Arial;
+background:#f4f4f4;
+margin:0;
+}
 
-    header p{
-      font-size:16px;
-    }
+header{
+background:#0a7a34;
+color:white;
+padding:30px;
+text-align:center;
+}
 
-    nav{
-      background:#0d5f25;
-      text-align:center;
-      padding:12px;
-    }
+nav{
+background:#055824;
+padding:10px;
+text-align:center;
+}
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin:0 12px;
-      font-weight:bold;
-      font-size:14px;
-    }
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
 
-    .container{
-      max-width:1000px;
-      margin:auto;
-      padding:20px;
-    }
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
 
-    .hero{
-      text-align:center;
-      background:white;
-      padding:25px;
-      border-radius:12px;
-      margin-top:20px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    }
+.section{
+background:white;
+padding:20px;
+margin-top:20px;
+border-radius:10px;
+}
 
-    .hero img{
-      width:100%;
-      max-width:500px;
-      border-radius:12px;
-      margin:20px 0;
-    }
+h2{
+color:#0a7a34;
+}
 
-    .btn{
-      display:inline-block;
-      background:#1fa84c;
-      color:white;
-      padding:12px 20px;
-      text-decoration:none;
-      border-radius:8px;
-      margin:8px 5px;
-      font-weight:bold;
-    }
+img{
+width:100%;
+max-width:500px;
+display:block;
+margin:auto;
+border-radius:10px;
+}
 
-    .btn-dark{
-      background:#0d5f25;
-    }
+.service{
+margin:10px 0;
+}
 
-    .section{
-      background:white;
-      margin-top:20px;
-      padding:25px;
-      border-radius:12px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    }
+.price{
+font-size:22px;
+color:#0a7a34;
+font-weight:bold;
+}
 
-    .section h2{
-      color:#0f7a2f;
-      margin-bottom:15px;
-      text-align:center;
-    }
+button{
+background:#0a7a34;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:5px;
+font-size:16px;
+margin-top:10px;
+cursor:pointer;
+}
 
-    .services,
-    .pricing,
-    .payments{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:15px;
-      margin-top:15px;
-    }
+footer{
+background:#055824;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
 
-    .card{
-      background:#f8fff9;
-      border:1px solid #d8eadc;
-      border-radius:10px;
-      padding:18px;
-      text-align:center;
-    }
+</style>
 
-    .card h3{
-      color:#0f7a2f;
-      margin-bottom:10px;
-    }
-
-    .price{
-      font-size:24px;
-      color:#1fa84c;
-      font-weight:bold;
-      margin:10px 0;
-    }
-
-    form{
-      display:grid;
-      gap:12px;
-      margin-top:15px;
-    }
-
-    input, select, textarea{
-      width:100%;
-      padding:12px;
-      border:1px solid #ccc;
-      border-radius:8px;
-      font-size:15px;
-    }
-
-    textarea{
-      min-height:120px;
-    }
-
-    button{
-      background:#1fa84c;
-      color:white;
-      border:none;
-      padding:12px;
-      border-radius:8px;
-      font-size:16px;
-      font-weight:bold;
-      cursor:pointer;
-    }
-
-    .contact-info{
-      text-align:center;
-      font-size:16px;
-      margin-top:10px;
-    }
-
-    .google-box{
-      text-align:center;
-      font-size:15px;
-      margin-top:10px;
-    }
-
-    footer{
-      background:#0d5f25;
-      color:white;
-      text-align:center;
-      padding:20px;
-      margin-top:25px;
-    }
-
-    @media(max-width:600px){
-      header h1{
-        font-size:28px;
-      }
-
-      nav a{
-        display:inline-block;
-        margin:6px 8px;
-      }
-    }
-  </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>LK Smart Services</h1>
-    <p>Your Future. Your Business. Done Smart.</p>
-  </header>
+<header>
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#request">Request</a>
-    <a href="#payments">Payments</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<h1>LK Smart Services</h1>
 
-  <div class="container">
+<p>Your Future. Your Business. Done Smart.</p>
 
-    <div class="hero">
-      <h2>Need a Job or Want to Boost Your Business?</h2>
-      <img src="Flyer.jpg" alt="LK Smart Services Flyer">
-      <p>
-        We help with professional resumes, cover letters, job applications,
-        business documents, flyers, and social media content.
-      </p>
-      <a class="btn" href="https://wa.me/17844973821" target="_blank">Message on WhatsApp</a>
-      <a class="btn" href="mailto:lkingsmartservices@gmail.com">Send Email</a>
-      <a class="btn btn-dark" href="#payments">Payment Options</a>
-    </div>
+</header>
 
-    <div class="section" id="services">
-      <h2>Our Services</h2>
-      <div class="services">
-        <div class="card">
-          <h3>Resumes</h3>
-          <p>Professional resumes that help you stand out.</p>
-        </div>
-        <div class="card">
-          <h3>Cover Letters</h3>
-          <p>Customized cover letters for job applications.</p>
-        </div>
-        <div class="card">
-          <h3>Job Application Help</h3>
-          <p>Assistance with filling out and submitting applications.</p>
-        </div>
-        <div class="card">
-          <h3>Business Documents</h3>
-          <p>Professional PDFs, letters, and other business files.</p>
-        </div>
-        <div class="card">
-          <h3>Flyers</h3>
-          <p>Eye-catching flyer designs for businesses and events.</p>
-        </div>
-        <div class="card">
-          <h3>Social Media Content</h3>
-          <p>Creative content to promote your business online.</p>
-        </div>
-      </div>
-    </div>
+<nav>
 
-    <div class="section" id="pricing">
-      <h2>Pricing</h2>
-      <div class="pricing">
-        <div class="card">
-          <h3>Basic</h3>
-          <div class="price">$25</div>
-          <p>Simple resume or simple flyer</p>
-        </div>
-        <div class="card">
-          <h3>Standard</h3>
-          <div class="price">$45</div>
-          <p>Resume + cover letter or business flyer package</p>
-        </div>
-        <div class="card">
-          <h3>Premium</h3>
-          <div class="price">$75</div>
-          <p>Business documents, flyer set, or social media package</p>
-        </div>
-      </div>
-    </div>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#payment">Payments</a>
+<a href="#contact">Contact</a>
 
-    <div class="section" id="request">
-      <h2>Request a Service</h2>
-      <form onsubmit="sendRequest(event)">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="text" id="phone" placeholder="Phone or WhatsApp Number">
-        <select id="service" required>
-          <option value="">Select a Service</option>
-          <option>Resume</option>
-          <option>Cover Letter</option>
-          <option>Job Application Assistance</option>
-          <option>Business Document</option>
-          <option>Flyer</option>
-          <option>Social Media Content</option>
-        </select>
-        <textarea id="details" placeholder="Write what you need..." required></textarea>
-        <button type="submit">Send Request</button>
-      </form>
-    </div>
+</nav>
 
-    <div class="section" id="payments">
-      <h2>Payment Options</h2>
-      <div class="payments">
-        <div class="card">
-          <h3>PayPal</h3>
-          <p>Send payment to:</p>
-          <p><strong>lkingsmartservices@gmail.com</strong></p>
-          <br>
-          <a class="btn" href="https://www.paypal.com/paypalme/" target="_blank">Pay with PayPal</a>
-        </div>
+<div class="container">
 
-        <div class="card">
-          <h3>Bank Transfer</h3>
-          <p><strong>Bank:</strong> BOSVG</p>
-          <p>Message us on WhatsApp or email us to receive bank transfer details.</p>
-          <br>
-          <a class="btn btn-dark" href="https://wa.me/17844973821" target="_blank">Request Bank Details</a>
-        </div>
+<div class="section">
 
-        <div class="card">
-          <h3>Need Help Paying?</h3>
-          <p>Contact us and we will guide you through payment.</p>
-          <br>
-          <a class="btn" href="mailto:lkingsmartservices@gmail.com">Email Us</a>
-          <a class="btn btn-dark" href="https://wa.me/17844973821" target="_blank">WhatsApp Us</a>
-        </div>
-      </div>
-    </div>
+<h2>Welcome</h2>
 
-    <div class="section" id="contact">
-      <h2>Contact Us</h2>
-      <div class="contact-info">
-        <p>📞 +1 (784) 497-3821</p>
-        <p>📧 lkingsmartservices@gmail.com</p>
-        <p>Saint Vincent & the Grenadines</p>
-        <br>
-        <a class="btn" href="https://wa.me/17844973821" target="_blank">Chat on WhatsApp</a>
-      </div>
-    </div>
+<img src="Flyer.jpg">
 
-    <div class="section">
-      <h2>Get Found on Google</h2>
-      <div class="google-box">
-        <p>Create a free Google Business Profile so customers can find LK Smart Services online.</p>
-        <p>Add your website link, phone number, email, and business photos.</p>
-      </div>
-    </div>
+<p style="text-align:center">
 
-  </div>
+Need help with resumes, job applications, business documents or flyers?  
+LK Smart Services is here to help you look professional.
 
-  <footer>
-    <p>© <span id="year"></span> LK Smart Services. All rights reserved.</p>
-  </footer>
+</p>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+<center>
 
-    function sendRequest(event){
-      event.preventDefault();
+<a href="https://wa.me/17844973821">
+<button>Message on WhatsApp</button>
+</a>
 
-      const name = document.getElementById("name").value;
-      const phone = document.getElementById("phone").value;
-      const service = document.getElementById("service").value;
-      const details = document.getElementById("details").value;
+</center>
 
-      const subject = encodeURIComponent("Service Request - " + service);
-      const body = encodeURIComponent(
-        "Name: " + name + "\n" +
-        "Phone/WhatsApp: " + phone + "\n" +
-        "Service Needed: " + service + "\n\n" +
-        "Details:\n" + details
-      );
+</div>
 
-      window.location.href = "mailto:lkingsmartservices@gmail.com?subject=" + subject + "&body=" + body;
-    }
-  </script>
+<div class="section" id="services">
+
+<h2>Our Services</h2>
+
+<div class="service">Professional Resumes</div>
+<div class="service">Cover Letters</div>
+<div class="service">Job Application Assistance</div>
+<div class="service">Business Documents & PDFs</div>
+<div class="service">Flyer Design</div>
+<div class="service">Social Media Content</div>
+
+</div>
+
+<div class="section" id="pricing">
+
+<h2>Pricing</h2>
+
+<p>Basic Resume</p>
+<div class="price">$25</div>
+
+<p>Resume + Cover Letter</p>
+<div class="price">$45</div>
+
+<p>Business / Flyer Package</p>
+<div class="price">$75</div>
+
+</div>
+
+<div class="section" id="payment">
+
+<h2>Payment Methods</h2>
+
+<p><b>PayPal</b></p>
+
+<p>
+Send payment to:  
+<b>lkingsmartservices@gmail.com</b>
+</p>
+
+<p><b>Bank Transfer</b></p>
+
+<p>
+Bank: **Bank of Saint Vincent (BOSVG)**  
+Contact us on WhatsApp for bank details.
+</p>
+
+<center>
+
+<a href="mailto:lkingsmartservices@gmail.com">
+<button>Email for Payment</button>
+</a>
+
+</center>
+
+</div>
+
+<div class="section" id="contact">
+
+<h2>Contact</h2>
+
+<p>Phone / WhatsApp:</p>
+
+<p><b>+1 (784) 497-3821</b></p>
+
+<p>Email:</p>
+
+<p><b>lkingsmartservices@gmail.com</b></p>
+
+<p>Saint Vincent and the Grenadines</p>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 LK Smart Services
+
+</footer>
 
 </body>
-  </html>
+
+</html>
